@@ -6,7 +6,11 @@ require('dotenv').config();
 const app = express();
 app.use(cors());
 app.use(express.json());
-
+//
+app.use(cors({
+  origin: 'https://lead-management-system-frontend-bwy5whltm.vercel.app', // use your Vercel frontend domain
+}));
+//
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('MongoDB connected'));
 
