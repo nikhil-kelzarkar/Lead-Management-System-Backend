@@ -18,3 +18,5 @@ app.use('/api/leads', require('./routes/leads'));
 app.use('/api/auth', require('./routes/auth'));
 
 app.listen(5000, () => console.log('Server running on port 5000'));
+
+PORT = process.env.PORT
